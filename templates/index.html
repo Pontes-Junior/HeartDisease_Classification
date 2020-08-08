@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>HD Classifier</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='health-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">HeartDisease Classifier</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="age" placeholder="Age eg. 36"><br>
+                <input class="form-input" type="text" name="sex" placeholder="Sex 0 = female , 1 = male"><br>
+                <input class="form-input" type="text" name="cp" placeholder="Chestpain 0(Nopain)-4(Painful) "><br>
+                <input class="form-input" type="text" name="trestbps" placeholder="Resting Blood Pressure(mm/Hg) eg. 140"><br>
+                <input class="form-input" type="text" name="chol" placeholder="Serum cholestoral in mg/dl eg. 200"><br>
+                <input class="form-input" type="text" name="fbs" placeholder="Fasting Blood Sugar mg/dl  0(good)- 1(fbs>120mg/dl)"><br>
+
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Pontes-Junior/HeartDisease_Classification"><i class="fab fa-github fa-lg contact-icon"></i></a>
+
+           </div>
+           <p class='footer-description'>Made with ❤️ by Anselmo Pontes Junior.</p>
+       </div>
+
+    </body>
+</html>
